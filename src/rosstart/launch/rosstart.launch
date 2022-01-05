@@ -1,0 +1,4 @@
+<launch>
+<node name="start_instance" pkg="rosstart" type="rosstart_node"/>
+
+</launch>
