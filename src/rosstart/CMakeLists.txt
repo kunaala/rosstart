@@ -24,6 +24,7 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_library(simple_pub_core
 	lib/SimplePublisher.cpp
+	lib/SimpleSubscriber.cpp
 	)
 
 target_link_libraries(simple_pub_core
@@ -32,9 +33,11 @@ target_link_libraries(simple_pub_core
 
 ## Build talker and simple_pub
 
-add_executable(talker src/simplepub.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
-add_dependencies(talker rosstart_generate_messages_cpp)
+# add_executable(talker src/simplepub.cpp)
+# target_link_libraries(talker ${catkin_LIBRARIES})
+# add_dependencies(talker rosstart_generate_messages_cpp)
+
+
 
 add_executable(simple_pub src/main.cpp)
 # also link with  simple_pub_core user defined library 
